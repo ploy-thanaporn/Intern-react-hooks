@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import Form from "./components/Form";
 
 function App() {
   // useState
@@ -43,6 +44,9 @@ function App() {
           >
             Random
           </button>
+        </div>
+        <div className="form">
+          <Form />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Form from "./components/Form";
+import FormTwo from "./components/Formtwo";
 
 function App() {
   // useState
@@ -46,7 +47,8 @@ function App() {
           </button>
         </div>
         <div className="form">
-          <Form />
+          {/* <Form /> */}
+          <FormTwo />
         </div>
       </div>
     </div>

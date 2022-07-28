@@ -5,6 +5,7 @@ import FormTwo from "./components/Formtwo";
 import Count from "./components/Count";
 import FecthData from "./components/FecthData";
 import Memo from "./components/Memo";
+import Callback from "./components/Callback";
 
 function App() {
   // useState
@@ -61,9 +62,14 @@ function App() {
           {/* <Form /> */}
           <FormTwo />
         </div>
+
         <FecthData />
+
         <h3>UseMemo</h3>
         <Memo />
+
+        <h3>UseCallback</h3>
+        <Callback />
       </div>
     </div>
   );

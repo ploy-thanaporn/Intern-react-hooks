@@ -19,12 +19,14 @@ const Content = ({ a, b }) => {
 
   return (
     <div>
-      <p>A: {a}</p>
-      <p>B: {b}</p>
+      <p>
+        A: {a}, B: {b}
+      </p>
+
       <p>Random: {random}</p>
       <p>MemorizedRandom: {memorizedRandom}</p>
     </div>
   );
 };
 
-// useMemo มักใช้ในการ optimize
+// useMemo มักใช้ในการ optimize , cashing value

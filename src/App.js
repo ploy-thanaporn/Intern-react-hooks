@@ -1,15 +1,29 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import Form from "./components/Form";
+// import Form from "./components/Form";
 import FormTwo from "./components/Formtwo";
+import Count from "./components/Count";
+import FecthData from "./components/FecthData";
 
 function App() {
   // useState
-  const [count, setCount] = useState(0);
-  const [title, setTitle] = useState("");
+  const [isShow, setIsShow] = useState(true);
   const [rgb, setRgb] = useState([0, 0, 0]);
 
   // useEffect : life circle -> componentDidmount, componentDidupdate , componentWillUnmount
+  // component ที่เกิดการอัพเดค ทำให้ต้อง render ใหม่ เช่น props , state
+
+  // useEffect(() => {
+  //   //called whenever state is changed
+  //   effect
+
+  //   return () => {
+  //   //called when component is deleted ()
+  //   //called when component is deleted ()
+  //     cleanup
+  //   }
+  // }, [input])  //ดักการเปลี่ยนแปลง state ตัวไหน ถ้าไม่ระบุ มันจะรันโค้ดแค่ครั้งเดียว
+
   useEffect(() => {
     const rgbElement = document.querySelector(".rgb");
     rgbElement.style.color = `rgb(${rgb.join(",")})`;
@@ -19,16 +33,12 @@ function App() {
     <div className="container">
       <div className="App">
         <div className="count">
-          <p>Title: {title}</p>
-          <p>UseState (count): {count}</p>
-
+          {isShow && <Count />}
           <button
-            onClick={() => {
-              setCount(count + 1);
-              setTitle("React Hook");
-            }}
+            style={{ marginLeft: "8px" }}
+            onClick={() => setIsShow(false)}
           >
-            ADD
+            HIDE
           </button>
         </div>
 
@@ -50,6 +60,7 @@ function App() {
           {/* <Form /> */}
           <FormTwo />
         </div>
+        <FecthData />
       </div>
     </div>
   );

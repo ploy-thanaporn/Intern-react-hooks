@@ -22,7 +22,7 @@ export default function Form() {
           onChange={(e) => setAccount({ ...account, password: e.target.value })}
         />
         <br />
-        <div className="btn">
+        <div>
           <button
             onClick={(e) => {
               e.preventDefault();

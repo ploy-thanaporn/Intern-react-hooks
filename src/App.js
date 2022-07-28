@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import FormTwo from "./components/Formtwo";
 import Count from "./components/Count";
 import FecthData from "./components/FecthData";
+import Memo from "./components/Memo";
 
 function App() {
   // useState
@@ -61,6 +62,8 @@ function App() {
           <FormTwo />
         </div>
         <FecthData />
+        <h3>UseMemo</h3>
+        <Memo />
       </div>
     </div>
   );
